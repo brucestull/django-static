@@ -6,9 +6,7 @@
 
 1. `pipenv install`
 1. `pipenv shell`
-1. `python manage.py migrate accounts`
 1. `python manage.py migrate`
-1. `python manage.py createsuperuser --email admin@email.app --username admin`
 1. `python manage.py createsuperuser --email FlynntKnapp@email.app --username FlynntKnapp`
 
 ### `pipenv`
@@ -47,6 +45,7 @@
 
 * Can't have leading `.\` when running command with `heroku run`:
   * `heroku run python manage.py createsuperuser --email admin@email.app --username admin`
+  * `heroku run python manage.py createsuperuser --email FlynntKnapp@email.app --username FlynntKnapp`
 * `heroku login`
 * `heroku create dezzi-diner`
 
