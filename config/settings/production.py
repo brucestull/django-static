@@ -9,8 +9,8 @@ ALLOWED_HOSTS = ['flynnt-knapp-django-static.herokuapp.com']
 
 MIDDLEWARE = MIDDLEWARE + ['whitenoise.middleware.WhiteNoiseMiddleware']
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+# `STATIC_ROOT` *IS* used in PROD.
+STATIC_ROOT = BASE_DIR / 'static-prod'
 
 DATABASES = {
     'default': {

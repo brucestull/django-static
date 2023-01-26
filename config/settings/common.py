@@ -110,9 +110,13 @@ USE_TZ = True
 # Used in both DEV and PROD:
 STATIC_URL = '/static-url/'
 
-# This is needed to serve static files, which are located in `BASE_DIR/static`, in development:
+# `STATIC_ROOT` *NOT* used in DEV.
+# `STATIC_ROOT` *IS* used in PROD.
+# `STATICFILES_DIRS` *IS* used in both DEV and PROD.
+# Since we are not using an <app> (which could have a `<app>/static/`) we need to set `STATICFILES_DIRS`.
+# This is needed to serve static files which are not located in any `<app>/static/` directory.
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    BASE_DIR / 'static-dev',
 ]
 
 # Default primary key field type

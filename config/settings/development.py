@@ -13,7 +13,7 @@ DATABASES = {
     }
 }
 
-STATIC_ROOT = BASE_DIR / 'static-root'
+# `STATIC_ROOT` is not used in DEV.
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
