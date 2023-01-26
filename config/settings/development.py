@@ -4,9 +4,7 @@ import os
 
 DEBUG = True
 
-
 ALLOWED_HOSTS = ['localhost']
-
 
 DATABASES = {
     'default': {
@@ -15,6 +13,7 @@ DATABASES = {
     }
 }
 
+STATIC_ROOT = BASE_DIR / 'static-root'
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/

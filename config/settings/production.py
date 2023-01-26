@@ -5,16 +5,12 @@ import os
 
 DEBUG = False
 
-
 ALLOWED_HOSTS = ['flynnt-knapp-django-static.herokuapp.com']
-
 
 MIDDLEWARE = MIDDLEWARE + ['whitenoise.middleware.WhiteNoiseMiddleware']
 
-
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-
 
 DATABASES = {
     'default': {
@@ -26,7 +22,6 @@ DATABASES = {
         'PASSWORD': os.environ.get('DATABASE_PASSWORD'),
     }
 }
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/

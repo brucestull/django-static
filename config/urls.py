@@ -20,7 +20,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import TemplateView
 
-from config.settings.common import THE_SITE_NAME, STATIC_URL, STATIC_ROOT
+from config.settings.common import THE_SITE_NAME, STATIC_URL
+from config.settings.development import STATIC_ROOT
 
 urlpatterns = [
     path(

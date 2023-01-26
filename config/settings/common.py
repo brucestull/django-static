@@ -107,8 +107,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
+# Used in both DEV and PROD:
 STATIC_URL = '/static-url/'
-STATIC_ROOT = BASE_DIR / 'static-root'
 
 # This is needed to serve static files, which are located in `BASE_DIR/static`, in development:
 STATICFILES_DIRS = [
