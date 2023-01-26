@@ -8,5 +8,12 @@
 ## Features
 
 * Serve 'static' files:
-  * `CSS`
   * Images
+  * `CSS`
+
+## URLs
+
+* Application URL:
+  * <https://flynnt-knapp-django-static.herokuapp.com/>
+* Git URL:
+  * <https://git.heroku.com/flynnt-knapp-django-static.git>
