@@ -25,54 +25,82 @@
 ## `images` Location in DEV
 
 * `static`
-  * `ls static/images/`:
+  * `ls .\static-dev\images\`:
 
   ```powershell
-  PS C:\Users\FlynntKnapp\Programming\django-static> ls static/images/
+  (django-static) PS C:\Users\FlynntKnapp\Programming\django-static> ls .\static-dev\images\
   
-      Directory: C:\Users\FlynntKnapp\Programming\django-static\static\images
+      Directory: C:\Users\FlynntKnapp\Programming\django-static\static-dev\images
   
   Mode                 LastWriteTime         Length Name
   ----                 -------------         ------ ----
   -a---           1/25/2023    07:51         238966 Dezzi_02.png
   
-  PS C:\Users\FlynntKnapp\Programming\django-static>
+  (django-static) PS C:\Users\FlynntKnapp\Programming\django-static>
   ```
 
-## `images` Location in PROD
+## `STATIC` File Location in PROD
 
-* `staticfiles`
-  * `ls -al`:
+* `ls -al`:
 
-    ```bash
-    ~ $ ls -al
-    total 116
-    drwx------ 10 u51836 dyno  4096 Jan 26 03:06 .
-    drwxr-xr-x 11 root   root  4096 Jan 24 17:32 ..
-    drwx------  4 u51836 dyno  4096 Jan 26 03:05 accounts
-    drwx------  4 u51836 dyno  4096 Jan 26 03:05 config
-    -rw-------  1 u51836 dyno  7405 Jan 26 03:05 .gitignore
-    drwx------  4 u51836 dyno  4096 Jan 26 03:05 .heroku
-    -rw-------  1 u51836 dyno 35149 Jan 26 03:05 LICENSE
-    -rw-------  1 u51836 dyno   674 Jan 26 03:05 manage.py
-    drwx------  2 u51836 dyno  4096 Jan 26 03:05 notes
-    -rw-------  1 u51836 dyno   264 Jan 26 03:05 Pipfile
-    -rw-------  1 u51836 dyno  4358 Jan 26 03:05 Pipfile.lock
-    -rw-------  1 u51836 dyno    96 Jan 26 03:05 Procfile
-    drwx------  2 u51836 dyno  4096 Jan 26 03:05 .profile.d
-    -rw-------  1 u51836 dyno   528 Jan 26 03:05 README.md
-    -rw-------  1 u51836 dyno   145 Jan 26 03:05 requirements.txt
-    -rw-------  1 u51836 dyno    13 Jan 26 03:05 runtime.txt
-    drwx------  3 u51836 dyno  4096 Jan 26 03:05 static
-    drwx------  4 u51836 dyno  4096 Jan 26 03:05 staticfiles
-    drwx------  3 u51836 dyno  4096 Jan 26 03:05 templates
-    ~ $
-    ```
+  ```bash
+  ~ $ ls -al
+  total 116
+  drwx------ 10 u43188 dyno  4096 Jan 26 03:57 .
+  drwxr-xr-x 11 root   root  4096 Jan 24 17:32 ..
+  drwx------  4 u43188 dyno  4096 Jan 26 03:55 accounts
+  drwx------  4 u43188 dyno  4096 Jan 26 03:55 config
+  -rw-------  1 u43188 dyno  7405 Jan 26 03:54 .gitignore
+  drwx------  4 u43188 dyno  4096 Jan 26 03:55 .heroku
+  -rw-------  1 u43188 dyno 35149 Jan 26 03:54 LICENSE
+  -rw-------  1 u43188 dyno   674 Jan 26 03:54 manage.py
+  drwx------  2 u43188 dyno  4096 Jan 26 03:54 notes
+  -rw-------  1 u43188 dyno   264 Jan 26 03:54 Pipfile
+  -rw-------  1 u43188 dyno  4358 Jan 26 03:54 Pipfile.lock
+  -rw-------  1 u43188 dyno    96 Jan 26 03:54 Procfile
+  drwx------  2 u43188 dyno  4096 Jan 26 03:55 .profile.d
+  -rw-------  1 u43188 dyno  2401 Jan 26 03:54 README.md
+  -rw-------  1 u43188 dyno   145 Jan 26 03:55 requirements.txt
+  -rw-------  1 u43188 dyno    13 Jan 26 03:55 runtime.txt
+  drwx------  3 u43188 dyno  4096 Jan 26 03:54 static-dev
+  drwx------  4 u43188 dyno  4096 Jan 26 03:55 static-prod
+  drwx------  3 u43188 dyno  4096 Jan 26 03:54 templates
+  ~ $
+  ```
 
-  * `ls staticfiles/images/`:
+* `ls -al static-prod/`:
 
-    ```bash
-    ~ $ ls staticfiles/images/
-    Dezzi_02.png
-    ~ $
-    ```
+  ```bash
+  ~ $ ls -al static-prod/
+  total 16
+  drwx------  4 u43188 dyno 4096 Jan 26 03:55 .
+  drwx------ 10 u43188 dyno 4096 Jan 26 03:57 ..
+  drwx------  6 u43188 dyno 4096 Jan 26 03:55 admin
+  drwx------  2 u43188 dyno 4096 Jan 26 03:55 images
+  ~ $
+  ```
+
+* `ls -al static-prod/admin/`:
+
+  ```bash
+  ~ $ ls -al static-prod/admin/
+  total 24
+  drwx------ 6 u43188 dyno 4096 Jan 26 03:55 .
+  drwx------ 4 u43188 dyno 4096 Jan 26 03:55 ..
+  drwx------ 3 u43188 dyno 4096 Jan 26 03:55 css
+  drwx------ 2 u43188 dyno 4096 Jan 26 03:55 fonts
+  drwx------ 3 u43188 dyno 4096 Jan 26 03:55 img
+  drwx------ 4 u43188 dyno 4096 Jan 26 03:55 js
+  ~ $
+  ```
+
+* `ls -al static-prod/images/`:
+
+  ```bash
+  ~ $ ls -al static-prod/images/
+  total 244
+  drwx------ 2 u43188 dyno   4096 Jan 26 03:55 .
+  drwx------ 4 u43188 dyno   4096 Jan 26 03:55 ..
+  -rw------- 1 u43188 dyno 238966 Jan 26 03:55 Dezzi_02.png
+  ~ $
+  ```
