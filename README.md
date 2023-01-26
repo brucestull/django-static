@@ -18,7 +18,11 @@
 * Git URL:
   * <https://git.heroku.com/flynnt-knapp-django-static.git>
 
-## Images Location in DEV
+## `images` Location in Browser
+
+* `<SERVER_ROOT>/static-url`
+
+## `images` Location in DEV
 
 * `static`
   * `ls static/images/`:
@@ -35,7 +39,7 @@
   PS C:\Users\FlynntKnapp\Programming\django-static>
   ```
 
-## Images Location in PROD
+## `images` Location in PROD
 
 * `staticfiles`
   * `ls -al`:
