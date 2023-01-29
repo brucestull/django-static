@@ -19,9 +19,30 @@
 
 #### Constants
 
-* `STATIC_URL` - The URL to use when referring to static files located in `STATIC_ROOT`.
-* `STATIC_ROOT` - The absolute path to the directory where collectstatic will collect static files for deployment.
-  * `STATIC_ROOT` is not set in `development.py` since Django can find static files located in the usual places, `<APP_NAME>/static/`.
+* `STATIC_URL` - The URL to use when referring to static files located in `STATIC_ROOT`:
+  * We use Django template tag `static` to refer to location of the static file `Dezzi_02.png`.
+
+    ```html
+    <img
+        ...
+        src="{% static 'images/Dezzi_02.png' %}"
+        ...
+        />
+    ```
+
+  -OR-
+  * We hard-code the location of the static file `Dezzi_02.png`.
+
+    ```html
+        <img
+            ...
+            src='/static-url/images/Dezzi_02.png'
+            ...
+            />
+    ```
+
+* `STATIC_ROOT` - The absolute path to the directory where collectstatic will copy the static files and place them in one directory for deployment.
+  * `STATIC_ROOT` is not set in `development.py` since Django doesn't need to move any files while we're in development. This helps us avoid having to run `collectstatic` every time we make a change to a static file.
 * `STATICFILES_DIRS` - A list of locations of additional static files.
   * We are using it in this example to point to the `static-dev` directory to serve static files in development.
 

@@ -4,17 +4,21 @@
 {% block title %}{{ the_site_name }} - Home{% endblock %}
 
 {% block content %}
-<h1>Home</h1>
+    <h1>Home</h1>
 
-{% comment %} <img
-    src="{% static 'Dezzi_01.png' %}"
-    alt="Dezzi, the grey cat, displaying a stern facial expression. She was loved by her human."
-    style="width: 66%;"
-    /> {% endcomment %}
-<img
-    src="{% static 'images/Dezzi_02.png' %}"
-    alt="Dezzi, the grey cat, in a fuzzy grey donut-shaped bed. She was loved by her human."
-    style="width: 66%;"
-    />
+    {% comment %} Properly using Django `static` template tag. {% endcomment %}
+    <img
+        src="{% static 'images/Dezzi_02.png' %}"
+        alt="Dezzi, the grey cat, in a fuzzy grey donut-shaped bed. She was loved by her human."
+        style="width: 66%;"
+        />
+    {% comment %} Hard-coding a location for the image. This is done
+    here to show the mapping resulting in using Django `static` template
+    tag. {% endcomment %}
+        <img
+        src="/static-url/images/Dezzi_02.png"
+        alt="Dezzi, the grey cat, in a fuzzy grey donut-shaped bed. She was loved by her human."
+        style="width: 66%;"
+        />
 
 {% endblock %}
